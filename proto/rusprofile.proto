@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package rusprofile;
+
+option go_package="github.com/SeizenPass/rusprofilegrpc/proto/rusprofile";
+
+message SearchRequest {
+  string uin = 1;
+}
+
+message SearchResponse {
+  string uin = 1;
+  string kpp = 2;
+  string name = 3;
+  string bio = 4;
+}
+
+service SearchService {
+  rpc Search(SearchRequest) returns (stream SearchResponse) {};
+}
+
