@@ -12,10 +12,16 @@ genW:
 	  --grpc-gateway_opt paths=source_relative \
 	  --grpc-gateway_opt grpc_api_configuration=proto/search.yaml \
 	  proto/rusprofile.proto
-build: genG genW
+genS:
+	protoc -I . --openapiv2_out ./swagger \
+        --openapiv2_opt logtostderr=true \
+        proto/rusprofile.proto
+build: genG genW genS
 clean:
 	rm proto/*.go
 runs:
-	go run server/server.go
+	go run server/*.go
 runc:
-	go run client/client.go
+	go run client/*.go
+docker: build
+	docker-compose up

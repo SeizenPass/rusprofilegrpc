@@ -1,7 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="c099eb2d-cb26-4a50-8d44-bcb26ff0588d" name="Default Changelist" comment="" />
+    <list default="true" id="c099eb2d-cb26-4a50-8d44-bcb26ff0588d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/proto/rusprofile.swagger.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swagger/rusprofile.swagger.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/client.go" beforeDir="false" afterPath="$PROJECT_DIR$/client/client.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/handlers.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/service.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/service.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/service.go" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,6 +47,9 @@
     </option>
   </component>
   <component name="GOROOT" path="C:\Users\Amiran\go\go1.16" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="GoLibraries">
     <option name="indexEntireGoPath" value="false" />
   </component>
@@ -29,9 +64,12 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../gitlab.com/SeizenPass/grpc-go-course" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/swagger" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Amiran\go\src\github.com\SeizenPass\rusprofilegrpc\swagger" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Amiran\go\src\github.com\SeizenPass\rusprofilegrpc\tools" />
     </key>
@@ -66,6 +104,18 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
   </component>
@@ -74,42 +124,42 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="561" y="246" key="#Go_Modules/0.0.1536.824@0.0.1536.824" timestamp="1623759111943" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1623769113836">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1623823494247">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1623769113836" />
-    <state width="1493" height="191" key="GridCell.Tab.0.bottom" timestamp="1623784635708">
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1623823494247" />
+    <state width="1493" height="191" key="GridCell.Tab.0.bottom" timestamp="1623825318935">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="191" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1623784635708" />
-    <state width="1493" height="191" key="GridCell.Tab.0.center" timestamp="1623784635708">
+    <state width="1493" height="191" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1623825318935" />
+    <state width="1493" height="191" key="GridCell.Tab.0.center" timestamp="1623825318935">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="191" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1623784635708" />
-    <state width="1493" height="191" key="GridCell.Tab.0.left" timestamp="1623784635708">
+    <state width="1493" height="191" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1623825318935" />
+    <state width="1493" height="191" key="GridCell.Tab.0.left" timestamp="1623825318935">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="191" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1623784635708" />
-    <state width="1493" height="191" key="GridCell.Tab.0.right" timestamp="1623784635708">
+    <state width="1493" height="191" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1623825318935" />
+    <state width="1493" height="191" key="GridCell.Tab.0.right" timestamp="1623825318935">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="191" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1623784635708" />
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1623775789847">
+    <state width="1493" height="191" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1623825318935" />
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1623786267095">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1623775789847" />
-    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1623775789847">
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1623786267095" />
+    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1623786267094">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1623775789847" />
-    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1623775789846">
+    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1623786267094" />
+    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1623786267094">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1623775789846" />
-    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1623775789847">
+    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1623786267094" />
+    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1623786267094">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1623775789847" />
+    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1623786267094" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

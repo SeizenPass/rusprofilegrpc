@@ -19,15 +19,15 @@ type app struct {
 
 func main() {
 	host := flag.String("host", "localhost:8081", "host")
-	grpcServerEndpoint := flag.String("grpc-server-endpoint",  "localhost:8080", "gRPC server endpoint")
+	grpcServerEndpoint := flag.String("grpc-server-endpoint", "localhost:8080", "gRPC server endpoint")
 	flag.Parse()
 
 	infoLog := log.New(os.Stdout, "INFO\t", log.Ldate|log.Ltime)
 	errorLog := log.New(os.Stderr, "ERROR\t", log.Ldate|log.Ltime|log.Lshortfile)
 
-	connGrpc, err := grpc.Dial(*host, grpc.WithInsecure())
+	connGrpc, err := grpc.Dial(*grpcServerEndpoint, grpc.WithInsecure())
 	if err != nil {
-		log.Fatalf("could not connect: %v", err)
+		errorLog.Printf("could not connect: %v", err)
 	}
 	defer connGrpc.Close()
 
@@ -48,12 +48,12 @@ func main() {
 	// Note: Make sure the gRPC server is running properly and accessible
 	mux := runtime.NewServeMux()
 	opts := []grpc.DialOption{grpc.WithInsecure()}
-	regErr := proto.RegisterSearchServiceHandlerFromEndpoint(ctx, mux,  *grpcServerEndpoint, opts)
+	regErr := proto.RegisterSearchServiceHandlerFromEndpoint(ctx, mux, *grpcServerEndpoint, opts)
 	if regErr != nil {
 		app.errorLog.Fatal(err)
 	}
 	// Start HTTP server (and proxy calls to gRPC server endpoint)
-	httpErr := http.ListenAndServe(":8081", mux)
+	httpErr := http.ListenAndServe(*host, mux)
 	if httpErr != nil {
 		app.errorLog.Fatal(err)
 	}

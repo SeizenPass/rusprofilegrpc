@@ -14,26 +14,25 @@ type SearchServiceInterface interface {
 }
 
 type SearchResponse struct {
-	UIN string
-	KPP string
+	UIN  string
+	KPP  string
 	Name string
-	Bio string
+	Bio  string
 }
 
 var (
-	regexUin = 	regexp.MustCompile("clip_inn.*>(.*)<")
-	regexKpp = 	regexp.MustCompile("clip_kpp.*>(.*)<")
+	regexUin  = regexp.MustCompile("clip_inn.*>(.*)<")
+	regexKpp  = regexp.MustCompile("clip_kpp.*>(.*)<")
 	regexName = regexp.MustCompile("legalName.?>([^<]*)<")
-	regexBio = 	regexp.MustCompile(`<meta name="keywords" content=.*, (.*), ИНН `)
-	regexPre =	regexp.MustCompile("Руководитель")
+	regexBio  = regexp.MustCompile(`<meta name="keywords" content=.*, (.*), ИНН `)
+	regexPre  = regexp.MustCompile("Руководитель")
 
 	regexSearchResult = regexp.MustCompile("search-result")
-	regexEmptyResult = 	regexp.MustCompile("emptyresult")
+	regexEmptyResult  = regexp.MustCompile("emptyresult")
 	regexNestedSearch = regexp.MustCompile("id/([0-9]*)")
 )
 
-
-type SearchServiceImpl struct {}
+type SearchServiceImpl struct{}
 
 func (s *SearchServiceImpl) Search(uin string) ([]*SearchResponse, error) {
 	res, err := http.Get(fmt.Sprintf("https://www.rusprofile.ru/search?query=%v", uin))
@@ -59,10 +58,6 @@ func (s *SearchServiceImpl) Search(uin string) ([]*SearchResponse, error) {
 		} else {
 			ers := regexNestedSearch.FindAllStringSubmatch(input, -1)
 			ch := make(chan *SearchResponse, len(ers))
-			for _, cl := range ers {
-				fmt.Printf("MATCH: %v\n", cl)
-			}
-			fmt.Println("REACHED")
 			wg := &sync.WaitGroup{}
 			var output []*SearchResponse
 			for _, id := range ers {

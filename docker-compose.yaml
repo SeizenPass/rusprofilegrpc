@@ -1,0 +1,25 @@
+version: '3.1'
+services:
+  swagger:
+    image: 'swaggerapi/swagger-ui'
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./swagger:/usr/share/nginx/html/swagger
+    environment:
+      API_URL: swagger/proto/rusprofile.swagger.json
+  grpc-server:
+    container_name: rusprofile-grpc-server
+    build:
+      context: .
+      dockerfile: server/Dockerfile
+    ports:
+      - "8085:8085"
+  grpc-client:
+    container_name: rusprofile-grpc-client
+    build:
+      context: .
+      dockerfile: client/Dockerfile
+    ports:
+      - "8081:8081"
+    restart: always
